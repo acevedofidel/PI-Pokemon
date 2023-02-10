@@ -37,3 +37,8 @@ export const ImageStyled = styled.img`
 	height: 129px;
 	width: 1122px;
 `;
+
+export const LogoLandingStyled = styled.img`
+	height: 128px;
+	width: 128px;
+`;
