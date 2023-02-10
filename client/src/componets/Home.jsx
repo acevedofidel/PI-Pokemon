@@ -11,7 +11,7 @@ import {
 } from "../actions";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import Card from "./card";
+import Card from "./Card";
 import Paginado from "./Paginado";
 import SearchBar from "./SearchBar";
 import Loading from "./Loading";
