@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const DivStyled = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
 `;
 
 export const ButtonStyled = styled.button`
@@ -34,6 +34,6 @@ export const ButtonStyled = styled.button`
 
 export const ImageStyled = styled.img`
 	justify-content: left;
-	height: 100px;
-	width: 150px;
+	height: 129px;
+	width: 1122px;
 `;
