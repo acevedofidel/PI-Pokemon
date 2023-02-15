@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { getPokemontypes } from "../actions";
+import { getPokemontypes } from "../../actions";
 
 const CreatePokemon = () => {
   const allTypes = useSelector((state) => state.pokemonstypes);

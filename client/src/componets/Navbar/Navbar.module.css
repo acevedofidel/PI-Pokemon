@@ -1,0 +1,42 @@
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0 20px 0px;
+    width: 85vw;
+    color: #000;
+    text-decoration: none;
+}
+
+.navlink{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
+    color: #FAFAFA;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 20px 20px;
+    border: 2px solid rgb(187, 169, 12);
+    background: #1e1e1f;
+    box-shadow: 3px 3px rgb(13, 14, 51);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-right: 15px;
+}
+
+.navlink:hover {
+    background-color: #101a31;
+    color: rgb(29, 27, 28);
+    transform: translateY(-4px);
+}
+
+.title{
+    margin-left: 15px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.3rem;
+    color: #FAFAFA;
+    text-transform: uppercase;
+}
+
+.to_home{
+    color: #FAFAFA;
+}

@@ -1,0 +1,49 @@
+
+.searchBar{
+    width: 100%;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 20px 20px;
+    border: 2px solid #111;
+    background: #10192b;
+    box-shadow: 3px 3px #111;
+    margin-right: 20px;
+    align-items: center;
+    padding-left: 2.5rem;
+}
+
+.searchBar:focus {
+    outline: none;
+}
+
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+   }
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #1c1c1d;
+    width: 1rem;
+    height: 1rem;
+}
+
+.buttonStyled {
+    font-family: 'Press Start 2P', cursive;
+	font-size: 0.9rem;
+	color: #fafafa;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 20px 20px;
+	border: 2px solid #111;
+	background: #905c08;
+	box-shadow: 3px 3px #111;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	margin-right: 15px;
+}

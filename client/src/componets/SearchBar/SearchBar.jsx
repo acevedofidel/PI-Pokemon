@@ -1,9 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { getNamePokemons } from "../actions";
+import { getNamePokemons } from "../../actions";
+import s from "./SearchBar.module.css";
 
-export default function SearchBar({ setCurrentPage }) {
+export const SearchBar = ({ setCurrentPage }) =>{
   const dispatch = useDispatch();
   const [name, setName] = useState("");
 
@@ -25,16 +26,16 @@ export default function SearchBar({ setCurrentPage }) {
   }
 
   return (
-    <div>
+    <div className={s.group}>
       <input
-        className="input1"
+        className={s.searchBar}
         value={name}
         type="text"
         placeholder="Nombre del pokemon"
         onChange={(e) => handleInputChange(e)}
       />
       <button
-        className="button5"
+        className={s.buttonStyled}
         type="submit"
         onClick={(e) => handleSubmit(e)}
       >
