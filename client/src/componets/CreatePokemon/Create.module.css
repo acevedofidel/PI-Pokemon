@@ -1,0 +1,87 @@
+.container {
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 93%;
+	color: #ddd;
+	background-image: linear-gradient(
+		89.7deg,
+		rgb(241, 238, 6) 2.8%,
+		rgba(225, 28, 6, 0.894) 97.8%
+	);
+	padding: 50px;
+}
+
+.textInicio {
+    font-family: 'Press Start 2P', cursive;
+	font-size: 1rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 20px 20px;
+	border: 2px solid #111;
+	background: #c4c70adc;
+	box-shadow: 3px 3px #111;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	margin-right: 15px;
+}
+
+.select {
+    font-family: 'Press Start 2P', cursive;
+    width: 80%;
+    margin: 0 20px 10px 20px;
+    padding: 10px;
+    border: 2px solid #111;
+    color: #111;
+    box-shadow: 3px 3px #111;
+}
+
+.input {
+    font-family: 'Press Start 2P', cursive;
+    width: 80%;
+    margin: 0 20px 10px 20px;
+    padding: 10px;
+    border: 2px solid #111;
+    color: #111;
+    box-shadow: 3px 3px #111;
+}
+
+.button {
+    font-family: 'Press Start 2P', cursive;
+    width: 80%;
+    margin: 0 20px 10px 20px;
+    padding: 10px;
+    border: 2px solid #111;
+    color: #111;
+    box-shadow: 3px 3px #111;
+}
+
+.span{
+    text-align: end;
+	padding: 0 10px;
+	width: 100%;
+	font-size: 1.5em;
+	border-radius: 5px;
+	color: hsl(0, 69%, 50%);
+}
+
+.formstyled{
+    display: flex;
+	flex-wrap: wrap;
+	padding: 40px;
+	
+}
+.inputStyled,
+.selectStyled,
+	.textareaStyled {
+		font-family: 'Press Start 2P', cursive;
+		width: 100%;
+		padding: 5px;
+		border: 2px solid #111;
+		color: #111;
+		box-shadow: 3px 3px #111;
+		align-items: left;
+		padding-left: 1.5rem;
+		resize: none;
+	}

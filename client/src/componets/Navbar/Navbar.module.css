@@ -14,22 +14,22 @@
     color: #FAFAFA;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 20px 20px;
-    border: 2px solid rgb(187, 169, 12);
-    background: #1e1e1f;
-    box-shadow: 3px 3px rgb(13, 14, 51);
+    padding: 10px 20px;
+    border: 2px solid #010101;
+    background: #d70606;
+    box-shadow: 3px 3px rgb(195, 33, 33);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     margin-right: 15px;
 }
 
 .navlink:hover {
-    background-color: #101a31;
+    background-color: #f3d110;
     color: rgb(29, 27, 28);
     transform: translateY(-4px);
 }
 
-.title{
+.titleStyle{
     margin-left: 15px;
     font-family: 'Press Start 2P', cursive;
     font-size: 1.3rem;
@@ -38,5 +38,6 @@
 }
 
 .to_home{
-    color: #FAFAFA;
+  display: flex;
+  flex-direction: column;
 }

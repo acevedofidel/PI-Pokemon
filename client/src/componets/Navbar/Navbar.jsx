@@ -9,8 +9,11 @@ export default function Navbar ({setCurrentPage}) {
             <div className={s.navbar}>
                 <Link to='/create' className={s.navlink}>Crear Pokemon</Link>
                 <SearchBar setCurrentPage={setCurrentPage} />
-                <h1 className={s.title}>SOY HENRY POKEMON PI</h1>
-               <Link to={'/'} className={s.to_home}><img src={img} alt='home'></img></Link>
+                <h1 className={s.titleStyle}>SOY HENRY POKEMON PI</h1>
+
+                <div className={s.to_home}>
+               <Link to={'/'} ><img src={img} alt='home'></img></Link>
+                </div>
             </div>
     )
 }

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getPokemontypes } from "../../actions";
+import s from './Create.module.css'
 
 const CreatePokemon = () => {
   const allTypes = useSelector((state) => state.pokemonstypes);
@@ -91,54 +92,50 @@ const CreatePokemon = () => {
   };
 
   return (
-    <div className="container ">
-      <Link className="textInicio" to="/home">
-        <button class="custom-btn btn">
+    
+    <div className={s.container}>
+      <Link to="/home">
+        <button class={s.textInicio}>
           <span>Volver al Inicio</span>
         </button>
       </Link>
 
       <div>
-        <img
-          className="imagenP"
-          src="https://seeklogo.com/images/P/Pokemon-logo-497D61B223-seeklogo.com.png"
-          alt="imagenbienvenido"
-        />
+        <h1 className="titleCreate">Crear Pokemon</h1>
       </div>
-      <div className="detailPokemon create-container">
-        <form onSubmit={handleSubmit}>
+      <div className={s.div_container}>
+        <form className={s.formStyled} onSubmit={handleSubmit}>
           <div>
-            <label>Nombre</label>
-            <input onChange={changePokemon} type="text" name="name" />
+            
+            <input className={s.inputStyled} onChange={changePokemon} type="text" name="name" placeholder="Nombre" />
           </div>
           <div>
-            <label>Puntos de vida</label>
-            <input onChange={changePokemon} type="number" name="life_points" />
-          </div>
-          <div>
-            <label>Ataque</label>
-            <input onChange={changePokemon} type="number" name="attack" />
-          </div>
-          <div>
-            <label>Defensa</label>
-            <input onChange={changePokemon} type="number" name="defense" />
-          </div>
-          <div>
-            <label>Velocidad</label>
-            <input onChange={changePokemon} type="number" name="speed" />
-          </div>
-          <div>
-            <label>Altura</label>
-            <input onChange={changePokemon} type="number" name="height" />
-          </div>
-          <div>
-            <label>Peso</label>
-            <input onChange={changePokemon} type="number" name="weight" />
-          </div>
-          <div>
-            <label>Tipos </label>
             <br />
-            <select onChange={addTipo}>
+            <input className={s.inputStyled} onChange={changePokemon} type="number" name="life_points" placeholder="Puntos de vida" />
+          </div>
+          <div>
+            <br />
+            <input className={s.inputStyled} onChange={changePokemon} type="number" name="attack" placeholder="Ataque"/>
+          </div>
+          <div>
+            <br />
+            <input className={s.inputStyled} onChange={changePokemon} type="number" name="defense" placeholder="Defensa" />
+          </div>
+          <div>
+            <br />
+            <input className={s.inputStyled} onChange={changePokemon} type="number" name="speed" placeholder="Velocidad" />
+          </div>
+          <div>
+            <br />
+            <input className={s.inputStyled} onChange={changePokemon} type="number" name="height" placeholder="Altura" />
+          </div>
+          <div>
+           <br />
+            <input className={s.inputStyled} onChange={changePokemon} type="number" name="weight" placeholder="Peso" />
+          </div>
+          <div>
+            <br />
+            <select className={s.inputStyled} onChange={addTipo}>
               <option value="ALL"> Todos </option>
               {allTypes?.map((c) => {
                 return <option value={c.name}>{c.name}</option>;
@@ -151,10 +148,9 @@ const CreatePokemon = () => {
               {newPokemon.tipo.map((t) => (
                 <div>
                   {t}{" "}
-                  <span
-                    className="cursorPointer xEliminar"
+                  <span className={s.span}
                     onClick={() => eliminarTipo(t)}
-                  >
+                    >
                     X
                   </span>
                 </div>
@@ -163,7 +159,7 @@ const CreatePokemon = () => {
             <hr />
           </div>
           {error && <h3 className="errorCreate">{error}</h3>}
-          <button class="cssbuttons-io-button">
+          <button class={s.button}>
             {" "}
             Crear Pokemon
             <div class="icon">
@@ -172,18 +168,19 @@ const CreatePokemon = () => {
                 width="24"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
-              >
+                >
                 <path d="M0 0h24v24H0z" fill="none"></path>
                 <path
                   d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
                   fill="currentColor"
-                ></path>
+                  ></path>
               </svg>
             </div>
           </button>
         </form>
       </div>
     </div>
+    
   );
 };
 

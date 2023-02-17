@@ -7,7 +7,7 @@
     text-decoration: none;
     padding: 20px 20px;
     border: 2px solid #111;
-    background: #10192b;
+    background: rgb(244, 208, 63);
     box-shadow: 3px 3px #111;
     margin-right: 20px;
     align-items: center;
@@ -36,12 +36,12 @@
 .buttonStyled {
     font-family: 'Press Start 2P', cursive;
 	font-size: 0.9rem;
-	color: #fafafa;
+	color: #000000;
 	text-transform: uppercase;
 	text-decoration: none;
 	padding: 20px 20px;
 	border: 2px solid #111;
-	background: #905c08;
+	background: rgb(244, 208, 63);
 	box-shadow: 3px 3px #111;
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;

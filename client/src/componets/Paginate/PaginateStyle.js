@@ -9,11 +9,6 @@ export const PaginateNav = styled.nav`
 export const PaginateUl = styled.ul`
     display: flex;
     list-style: none;
-    &:active {
-        background-color: #101a31;
-        color: rgb(16, 26, 49);
-        transform: translate(2px, 2px);
-    }
 `;
 
 export const PaginateButton = styled.button`
@@ -24,28 +19,27 @@ export const PaginateButton = styled.button`
 	text-decoration: none;
 	padding: 15px 20px;
 	border: 2px solid #111;
-	background: rgb(16, 16, 49);
+	background: rgb(244, 208, 63);
 	box-shadow: 3px 3px #111;
 	cursor: pointer;
 	margin-right: 20px;
-	transition: all 0.3s ease-in-out;
 
 	&:hover {
 		background-color: #272a2c;
-		color: rgb(16, 26, 49);
-		transform: translateY(-4px);
+		color: rgb(235, 152, 78);
+
 	}
 
 	&:active {
 		background-color: #101a31;
-		color: rgb(16, 26, 49);
-		transform: translate(2px, 2px);
+		color: rgb(244, 208, 63);
+		
 	}
 
 	&.active {
 		background-color: #272a2c;
-		color: rgb(16, 26, 49);
-		transform: translate(2px, 2px);
+		color: rgb(241, 148, 138);
+		
 	}
 `;
 
