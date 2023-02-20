@@ -64,6 +64,7 @@ export default function Home() {
     <>
     <div className={s.div_home}>
      <Navbar setCurrentPage={setCurrentPage}/>
+  
       <div>
         <select className={s.select_container} onChange={handleSort}>
           <option value="asc">Ascendete</option>
@@ -96,7 +97,7 @@ export default function Home() {
           {currentPokemons.length > 0 ? (
             currentPokemons?.map((p) => {
               return (
-                <Link
+                <Link className={s.link}
                 key={p.id}
                 to={"/detail/" + p.id}
                 >
@@ -111,6 +112,7 @@ export default function Home() {
             ) : (
               <h5>No se encontraron pokemons con esas caracteristicas</h5>
               )}
+          
         </div>
       </div>
     </div>

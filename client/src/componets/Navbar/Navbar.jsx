@@ -13,8 +13,12 @@ export default function Navbar ({setCurrentPage}) {
 
                 <div className={s.to_home}>
                <Link to={'/'} ><img src={img} alt='home'></img></Link>
+               
+            
+               {/* <button onClick={() => window.location.reload(false)}>Reload</button> */}
                 </div>
             </div>
+    
     )
 }
 

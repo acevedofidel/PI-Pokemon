@@ -11,8 +11,9 @@ export const DivStyled = styled.div`
 `;
 
 export const DivStyled2 = styled.div`
+    font-family: 'Press Start 2P', cursive;
     margin: 15px;
-    background-color: beige;
+    background-color: rgb(244, 208, 63);
     font-size: 0.8rem;
     box-shadow: #111 6px 6px;
     border: 2px solid #111;

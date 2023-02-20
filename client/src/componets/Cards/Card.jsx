@@ -8,7 +8,7 @@ export default function Card({ name, image, tipos }) {
       
       <DivStyled2>
       <h2>{name}</h2>
-        <p>Tipo : </p>
+        <p>Tipo: </p>
         {tipos.map((tipo) => (
           <p>{tipo}</p>
         ))}

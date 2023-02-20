@@ -83,3 +83,16 @@ export function filterCreated(payload) {
   };
 }
 
+export function deletePokemon(id) {
+  return async function (dispatch) {
+    try {
+      var json = await axios.delete(`http://localhost:3001/pokemons/${id}`);
+      return dispatch({
+        type: "DELETE_POKEMON",
+        payload: id,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
