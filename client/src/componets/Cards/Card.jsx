@@ -1,5 +1,5 @@
 import React from "react";
-import { DivStyled, DivStyled2, h1 } from "./Cards";
+import { DivStyled, DivStyled2 } from "./Cards";
 
 export default function Card({ name, image, tipos }) {
   console.log(tipos);
