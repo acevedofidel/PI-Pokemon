@@ -7,7 +7,7 @@ export default function Card({ name, image, tipos }) {
     <DivStyled>
       
       <DivStyled2>
-      <h2>{name}</h2>
+      <h2>{name.toUpperCase()}</h2>
         <p>Tipo: </p>
         {tipos.map((tipo) => (
           <p>{tipo}</p>
