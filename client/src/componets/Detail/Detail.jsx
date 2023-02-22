@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import s from "./Detail.module.css";
+import Loader from "../Loader/Loader";
 
 const Detail = (props) => {
   const [pokemon, setPokemon] = useState(null);
@@ -56,7 +57,7 @@ const Detail = (props) => {
           <h4 className="caracteristicas">Peso: {pokemon.weight}</h4>
         </div>
       ) : (
-        <h4>No se pudo cargar el pokemon</h4>
+       <Loader/>
       )}
     </div>
   );

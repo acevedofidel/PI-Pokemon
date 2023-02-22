@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     padding: 0 5%;
-    background-color: rgb(160, 148, 18);
+    background-image: linear-gradient( 89.7deg,  rgba(204, 10, 10, 0.678) 2.8%, rgba(247, 247, 6, 0.644) 97.8% ) ;
 }
 
 .div_title{

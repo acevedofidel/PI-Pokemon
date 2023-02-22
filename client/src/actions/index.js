@@ -52,6 +52,14 @@ export function getIdPokemons(id) {
   };
 }
 
+//exportar la funcion orderByAttack
+export function orderByAttack(payload) {
+  return {
+    type: "ORDER_BY_ATTACK",
+    payload,
+  }
+}
+
 export function filterPokemonsByTypes(payload) {
   return {
     type: "FILTER_BY_TYPES",

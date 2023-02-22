@@ -45,6 +45,32 @@ function rootReducer(state = initialState, action) {
         ...state,
         pokemonstypes: action.payload,
       };
+
+      case "ORDER_BY_ATTACK":
+                            let sortedAttack = action.payload === 'max' ?
+                                state.pokemons.sort(function(a, b){
+                                    if(a.attack < b.attack) {
+                                        return 1;
+                                    }
+                                    if(b.attack < a.attack) {
+                                        return -1;
+                                    }
+                                    return 0;
+                                }) :
+                                state.pokemons.sort(function(a, b){
+                                    if(a.attack < b.attack) {
+                                        return -1;
+                                    }
+                                    if(b.attack < a.attack) {
+                                        return 1;
+                                    }
+                                    return 0;
+                                })
+                                return {
+                                    ...state,
+                                    pokemons: sortedAttack
+                                }
+
     case "ORDER_BY_NAME":
       console.log(state.pokemonsbackup);
       let sortedArr =
@@ -91,6 +117,7 @@ function rootReducer(state = initialState, action) {
         pokemons: action.payload === "all" ? state.pokemonsbackup : sortedArr,
       };
 
+          
     case "FILTER_CREATED":
       const allPokemon = state.pokemonsbackup;
       const createdFilter =

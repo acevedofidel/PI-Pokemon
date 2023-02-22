@@ -1,9 +1,8 @@
-//importo los hooks q voy a usar de react
 import React, { useState, useEffect } from "react";
-import s from '../Home/Home.module.css'
-//importo la action q voy a usar en este componente
+import s from './home.module.css'
 import {
   getPokemons,
+  orderByAttack,
   filterPokemonsByTypes,
   getPokemontypes,
   filterCreated,
@@ -14,6 +13,8 @@ import { useDispatch, useSelector } from "react-redux";
 import Card from "../Cards/Card";
 import Navbar from "../Navbar/Navbar";
 import Paginate from "../Paginate/Paginate.jsx";
+import { DivStyled } from "../Loader/LoaderStyled";
+
 
 
 export default function Home() {
@@ -21,7 +22,7 @@ export default function Home() {
   const allPokemons = useSelector((state) => state.pokemons);
   const [orden, setOrden] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [pokemonsPerPage, setPokemonsPerPage] = useState(12);
+  const [pokemonsPerPage] = useState(12);
   const indexOfLastPokemons = currentPage * pokemonsPerPage;
   const indexOfFirsttPokemons = indexOfLastPokemons - pokemonsPerPage;
   const currentPokemons = allPokemons.slice(
@@ -38,7 +39,7 @@ export default function Home() {
     dispatch(getPokemons());
     dispatch(getPokemontypes());
     setCurrentPage(1);
-  }, []);
+  }, [dispatch]);
 
 
   function handleSort(e) {
@@ -47,6 +48,13 @@ export default function Home() {
     dispatch(orderByname(e.target.value));
     setOrden(`Ordenado ${e.target.value}`);
   }
+
+  const handleSortAttack = (e) => {
+        e.preventDefault();
+        dispatch(orderByAttack(e.target.value));
+        setCurrentPage(1);
+        setOrden(`Ordenado ${e.target.value}`);
+    }  
 
   function handleFilterTypes(e) {
     setCurrentPage(1);
@@ -57,9 +65,7 @@ export default function Home() {
     setCurrentPage(1);
     dispatch(filterCreated(e.target.value));
   }
-  // if (allPokemons.length === 0) {
-  //   return <Loading/>
-  // }
+  
   return (
     <>
     <div className={s.div_home}>
@@ -79,13 +85,19 @@ export default function Home() {
           })}
         </select>
 
+         <select className={s.select_container} onChange={e => handleSortAttack(e)}>
+                <option value='default'>Attack</option>
+                <option value="max">Attack ++</option>
+                <option value="min">Attack --</option>
+                </select>
+
         <select className={s.select_container} onChange={handleFilterCreated}>
           <option value="All">Todos</option>
           <option value="created">Creados</option>
           <option value="api">Existentes</option>
         </select>
           <div>
-
+          
         <Paginate
           pokemosPerPage={pokemonsPerPage}
           allPokemons={allPokemons.length}
@@ -110,12 +122,20 @@ export default function Home() {
               );
             })
             ) : (
-              <h5>No se encontraron pokemons con esas caracteristicas</h5>
-              )}
+              <DivStyled>
+              
+               <h1>No se encontraron Pokemones con esas caracteristicas</h1>
+                
+              </DivStyled>
+              )
+            }
           
         </div>
       </div>
     </div>
               </>
+              
   );
+  
+  
 }
